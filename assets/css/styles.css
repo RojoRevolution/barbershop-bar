@@ -1,7 +1,15 @@
 :root {
     --display: 'Rye', Georgia, cursive;
     --sans-serif: 'Raleway', Helvetica, Arial, sans-serif;;
-    --off-white: #F2F2DF
+    --off-white: #F2F2DF;
+    --dark: #171717;
+    --soft-dark: #333333;
+    --green-metal: #52615F;
+}
+
+/* ==== Universal ==== */
+body {
+    background-color: var(--off-white);
 }
 
 h1 {
@@ -13,7 +21,7 @@ h1 {
 }
 
 h2 {
-    font-family: var(--sans-serif);
+    font-family: var(--display);
     font-weight: 700;
     color: var(--off-white);
     font-size: 3rem;
@@ -21,6 +29,59 @@ h2 {
     line-height: 3.5rem;
 }
 
+h3 {
+    font-family: var(--sans-serif);
+    font-weight: 700;
+    color: var(--off-white);
+    font-size: 2rem;
+    margin: 1rem 0;
+    line-height: 3.5rem;
+}
+
+p {
+    font-family: var(--sans-serif);
+    color: var(--soft-dark);
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin: 10px 0;
+}
+
+
+/* ==== Utility ==== */
+
+.my-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mx-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.pos-rel {
+    position: relative;
+}
 
 .row {
     display: flex;
@@ -49,12 +110,18 @@ h2 {
     height: 100vh;
 }
 
-/* Header */
+.img {
+    width: 99%;
+    margin: 10px 0;
+}
+
+/* ==== Header ==== */
 #main-header {
     justify-content: space-between;
-    padding: 1.25rem;
+    padding: 2rem;
     position: fixed;
     width: 100%;
+    z-index: 20;
 }
 
 .logo {
@@ -63,13 +130,76 @@ h2 {
 
 .menu {
     display: flex;
+    position: relative;
+    align-items: center;
 }
 
-/* Intro Section */
+.menu-btn {
+    cursor: pointer;
+    font-family: var(--sans-serif);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 50px 10px 14px;
+    border: 1px solid var(--off-white);
+    border-radius: 8px;
+    color: var(--off-white);
+    margin-top: 20px;
+}
+
+.menu:hover .menu-btn {
+    background: rgba(255,255,255,.25);
+}
+
+.img-go {
+    background: center no-repeat url('../images/menu/menu_animated.gif');
+    background-size: 100%;
+    position: absolute;
+    top: -3px;
+    right: 2px;
+    width: 46px;
+    height: 76px;
+    cursor: pointer;
+}
+
+.menu:hover .img-go {
+    background: center no-repeat url('../images/menu/menu_static.gif');
+    background-size: 100%;
+}
+
+.menu-img {
+    max-width: 46px;
+}
+
+/* ==== Intro Section ==== */
 #welcome {
     /* background-image: url('../images/intro/intro_image_001.jpg'); */
     min-height: 100vh;
     width: 100%;
+}
+
+#welcome h3 {
+    font-size: 2rem;
+    text-align:center;
+}
+
+#welcome h3::before {
+    content: '';
+    padding: 2px;
+    width: 100px;
+    background-color: var(--off-white);
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 0;
+}
+
+#welcome h3::after {
+    content: '';
+    padding: 2px;
+    width: 100px;
+    background-color: var(--off-white);
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 0;
 }
 
 .overlay {
@@ -81,6 +211,7 @@ h2 {
 #intro-bg {
     background-color: #000;
     background-image: url('../images/intro/intro_image_001.jpg');
+    background-attachment: fixed;
     transition: 2s;
 }
 
@@ -93,4 +224,50 @@ h2 {
 
 #welcome h1, #welcome h2 {
     text-align: center;
+}
+
+.bubbles-left {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    background: center no-repeat url(../images/intro/bubbles-left.svg);
+    width: 486px;
+    height: 177px;
+}
+
+.bubbles-right {
+    position: absolute;
+    right: 0;
+    bottom: -4px; 
+    background: center no-repeat url(../images/intro/bubbles-right.svg);
+    width: 486px;
+    height: 177px;
+}
+
+.intro-gradient {
+    position: absolute;
+    bottom: 0;
+    height: 300px;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%);
+
+}
+
+/* ==== Main Content ==== */
+#about {
+    padding: 200px 0;
+    position: relative;
+}
+
+#about .container-content {
+    justify-content: space-between;
+}
+
+#about h2, #about h3 {
+    color: var(--dark);
+}
+
+.about-content {
+    max-width: 700px;
 }

@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM loaded')
-    let introBG = document.getElementById('intro-bg')
+    let introBG = document.getElementById('intro-bg');
+    let scrollImg = document.querySelector('.img-go');
 
     let introSRC = [
         "url('./assets/images/intro/intro_image_001.jpg')",
@@ -37,6 +38,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     setInterval(changeBG, 7000);
-
 
 })
