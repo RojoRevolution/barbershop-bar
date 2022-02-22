@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155133026-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-155133026-2');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +18,7 @@
         content="The Barbershop is a no-frills craft beer and wine bar located in historic down town Dripping Springs.">
     <link rel="stylesheet" href="./assets/css/resets.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/bubbles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -45,11 +54,46 @@
             </div>
         </div>
         <div class="intro-gradient"></div>
-        <div class="bubbles-left">
-            <!-- <img src="./assets/images/intro/bubbles-left.svg"> -->
-        </div>
-        <div class="bubbles-right">
-            <!-- <img src="./assets/images/intro/bubbles-right.svg"> -->
+        <div class="bubbles-b-left"></div>
+        <div class="bubbles-b-right"></div>
+        <div class="bubble-container">
+            <div id="animation-parent" class="row">
+                <!-- Set One -->
+                <!-- <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-a duration-1"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-b duration-4"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-a duration-3"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-b-fast duration-3"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-c duration-5"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-a duration-2 delay-1"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-b duration-6"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-b-fast duration-8"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-a duration-4"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-c duration-3"></div>
+                </div>
+                <div class="bubble-container-single pos-rel d-flex">
+                    <div class="bubble-sm-a duration-2"></div>
+                </div> -->
+
+            </div>
         </div>
     </section>
     <section>
@@ -58,7 +102,7 @@
                 <div class="col mx-20 about-content">
                     <h2>A Clean and Close Pub</h2>
                     <p>
-                        The Barbershop is a no-frills Beer and Wine bar located in historic Downtown Dripping Springs,
+                        The Barbershop is a no-frills beer and wine bar located in historic, downtown Dripping Springs,
                         Tx. Our main focus revolves around Texas Craft Beer, but we carry options for all. Established
                         in 2009, The Barbershop has become a favorite for locals to enjoy great beer and make new
                         friends. We host live music almost every Tuesday, and host a Pickers Circle every Sunday, for
@@ -87,8 +131,8 @@
     </section>
     <section id="bottom-hero">
         <div class="container-flex bottom-hero">
-            <div class="overlay">
-                <div class="container">
+            <div class="overlay py-100">
+                <div class="container-content col">
                     <h2>18 Craft Beers On Tap</h2>
                     <div class="pos-rel my-20">
                         <h3 class="hyperfocus">with a hyper focus on Texas Breweries</h3>
@@ -96,8 +140,93 @@
                 </div>
             </div>
         </div>
+        <div class="bubbles-t-left"></div>
+        <div class="bubbles-t-right"></div>
+        <div class="bubbles-b-left"></div>
+        <div class="bubbles-b-right"></div>
     </section>
+    <section>
+        <div id="location" class="container-flex py-100">
+            <div class="container-content col px-20">
+                <h2 class="align-c">Don't be shy. stop on by</h2>
+                <h4 class="align-c">We are a pet friendly establishment, and outside food is welcome.</h4>
+                <div class="row justify-c">
+                    <div class="map-container">
+                        <div id="map">
+                            <script>
+                                function initMap() {
+                                    var uluru = { lat: 30.192616, lng: -98.088784 };
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 17,
+                                        center: uluru,
+                                    });
+                                    var marker = new google.maps.Marker({
+                                        position: uluru,
+                                        map: map
+                                    });
+                                    var noPoi = [
+                                        {
+                                            featureType: "poi",
+                                            stylers: [
+                                                { visibility: "off" }
+                                            ]
+                                        }
+                                    ];
+
+                                    map.setOptions({ styles: noPoi });
+                                }
+
+                            </script>
+                            <script async defer
+                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6SM9GDsAP59A1FUN-cOtnXV29nb4heTk&callback=initMap">
+                                </script>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-c">
+                    <div class="col pr-100">
+                        <h4>The Barbershop</h4>
+                        <p>
+                            207 Mercer Street<br>
+                            Dripping Springs, Texas 78620<br>
+                            P: (512) 829-4636
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h4>Hours</h4>
+                        <p>
+                            Mon-Fri: 3pm - 11pm<br>
+                            Sat: 2pm - 11pm <br>
+                            Sun: 2pm - 9pm
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-flex col">
+            <div class="container py-100">
+                <div class="footer-logo align-c">
+                    <img src="./assets/images/logos/Barbershop_red.svg">
+                    <p>A clean and close pub</p>
+                    <ul>
+                        <li><a href="#">Back to the Top<a /></li>
+                        <li><a href="#">Treat a friend, buy a gift card</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <p class="copyright align-c">Copyright &copy;
+                    <script>document.write(new Date().getFullYear())</script> The Barbershop. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
     <script src="./assets/js/intro-bg.js" type="text/javascript"></script>
+    <script src="./assets/js/bubbles.js" type="text/javascript"></script>
 </body>
 
 </html>

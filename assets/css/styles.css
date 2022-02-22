@@ -1,10 +1,11 @@
 :root {
     --display: 'Rye', Georgia, cursive;
     --sans-serif: 'Raleway', Helvetica, Arial, sans-serif;;
-    --off-white: #F2F2DF;
+    --off-white: rgb(242, 242, 222);
     --dark: #171717;
     --soft-dark: #333333;
     --green-metal: #52615F;
+    --barber-red: #CE4646;
 }
 
 /* ==== Universal ==== */
@@ -22,9 +23,9 @@ h1 {
 
 h2 {
     font-family: var(--display);
-    font-weight: 700;
+    font-weight: 500;
     color: var(--off-white);
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1rem 0;
     line-height: 3.5rem;
 }
@@ -35,12 +36,23 @@ h3 {
     color: var(--off-white);
     font-size: 2rem;
     margin: 1rem 0;
-    line-height: 3.5rem;
+    line-height: 3.25rem;
 }
+
+h4 {
+    font-family: var(--sans-serif);
+    font-weight: 700;
+    color: var(--soft-dark);
+    font-size: 1.5rem;
+    margin: 1rem 0 .25rem 0;
+    line-height: 1.25rem;
+}
+
+
 
 p {
     font-family: var(--sans-serif);
-    color: var(--soft-dark);
+    color: inherit;
     font-size: 1.25rem;
     line-height: 2rem;
     margin: 10px 0;
@@ -59,6 +71,11 @@ p {
     margin-right: 20px;
 }
 
+.mx-20 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .mb-60 {
     margin-bottom: 60px;
 }
@@ -67,12 +84,34 @@ p {
     margin-top: 60px;
 }
 
+.py-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.px-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pr-100 {
+    padding-right: 100px;
+}
+
+.py-100 {
+    padding: 100px 0;
+}
+
 .d-none {
     display: none;
 }
 
 .d-block {
     display: block;
+}
+
+.d-flex {
+    display: flex;
 }
 
 .pos-abs {
@@ -113,6 +152,18 @@ p {
 .img {
     width: 99%;
     margin: 10px 0;
+}
+
+.align-c {
+    text-align: center;
+}
+
+.align-r {
+    text-align: right;
+}
+
+.justify-c {
+    justify-content: center;
 }
 
 /* ==== Header ==== */
@@ -172,13 +223,12 @@ p {
 
 /* ==== Intro Section ==== */
 #welcome {
-    /* background-image: url('../images/intro/intro_image_001.jpg'); */
     min-height: 100vh;
     width: 100%;
+    position: relative;
 }
 
 #welcome h3 {
-    font-size: 2rem;
     text-align:center;
 }
 
@@ -227,7 +277,14 @@ p {
     text-align: center;
 }
 
-.bubbles-left {
+.bubble-container {
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+}
+
+.bubbles-b-left {
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -236,13 +293,33 @@ p {
     height: 177px;
 }
 
-.bubbles-right {
+.bubbles-b-right {
     position: absolute;
     right: 0;
     bottom: -4px; 
     background: center no-repeat url(../images/intro/bubbles-right.svg);
     width: 486px;
     height: 177px;
+}
+
+.bubbles-t-right {
+    position: absolute;
+    right: 0;
+    top: -4px;
+    background: center no-repeat url(../images/intro/bubbles-left.svg);
+    width: 486px;
+    height: 177px;
+    transform: rotate(180deg);
+}
+
+.bubbles-t-left {
+    position: absolute;
+    left: 0;
+    top: -4px; 
+    background: center no-repeat url(../images/intro/bubbles-right.svg);
+    width: 486px;
+    height: 177px;
+    transform: rotate(180deg);
 }
 
 .intro-gradient {
@@ -274,27 +351,28 @@ p {
 }
 
 /* === Bottom Hero === */
+#bottom-hero {
+    position: relative;
+}
+
 .bottom-hero {
     background: center / cover no-repeat url(../images/hero2/craftbeer_signs.jpg);
     background-attachment: fixed;
 }
 
-
 .bottom-hero .container {
     vertical-align: center;
 }
 
-
 /* Header Overriders */
 #bottom-hero h2 {
-    text-align: center;
     text-align: center;
     font-size: 4rem;
     margin: 3rem 0;
 }
 
 .bottom-hero .overlay{
-    min-height: 500px;
+    min-height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,3 +403,54 @@ p {
     left: calc(50% - 50px);
     bottom: 0;
 }
+
+/* === Location === */
+
+#location h2 {
+    color: var(--soft-dark);
+}
+
+.map-container {
+    width: 70%;
+    margin: 2.5rem;
+}
+
+#map {
+    height: 340px;
+    width: 100%;
+}
+
+/* === Footer === */
+footer {
+    background-color: var(--soft-dark);
+    color: var(--off-white);
+}
+
+footer ul {
+    margin: 0;
+    padding: 1rem;
+}
+
+footer ul li {
+    padding: .5rem;
+    font-family: var(--sans-serif);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+footer ul li a {
+    color: var(--barber-red);
+    text-decoration: none;
+}
+
+footer .container-flex div.container:last-child {
+    background-color: var(--dark);
+    padding: 1rem 0;
+}
+
+.copyright {
+    font-size: .75rem;
+    color:var(--off-white);
+}
+

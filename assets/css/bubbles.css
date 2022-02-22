@@ -1,0 +1,411 @@
+.bubble-container-single {
+    width: 20px;
+}
+
+.bubble-lg-a {
+    background: rgba(242, 242, 222, .25);
+    border: 1px solid rgba(242, 242, 222, 1);
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    animation-name: bubble-up-lg-a;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes bubble-up-lg-a {
+    0% {
+        bottom: 0px;
+        right: 0;
+    }
+
+    25% {
+        right: 60px;
+    }
+
+    50% {
+        right: -30px;
+    }
+
+    75% {
+        right: 40px;
+    }
+
+    100% {
+        width: 35px;
+        height: 35px;
+        bottom: 400px;
+        right: 0px;
+    }
+}
+
+.bubble-lg-b {
+    background: rgba(242, 242, 222, .25);
+    border: 1px solid rgba(242, 242, 222, 0);
+    opacity: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    animation-name: bubble-up-lg-b;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-lg-b {
+    0% {
+        bottom: 30px;
+        left: 0;
+        border: 1px solid rgba(242, 242, 222, 0);
+    }
+
+
+    50% {
+        width: 20px;
+        height: 20px;
+        left: 60px;
+        background: rgba(242, 242, 222, .25);
+        border: 1px solid rgba(242, 242, 222, .5);
+    }
+
+
+    99% {
+        left: -20px;
+        background: rgba(242, 242, 222, 0);
+        border: 1px solid rgba(242, 242, 222, 1);
+    }
+
+    100% {
+        border: 1px solid rgba(242, 242, 222, 0);
+        bottom: 150px;
+    }
+}
+
+.bubble-md-a {
+    background: rgba(242, 242, 222, .25);
+    border: 1px solid rgba(242, 242, 222, 1);
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-name: bubble-up-md-a;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-md-a {
+    0% {
+        bottom: 10px;
+        left: 0;
+    }
+
+    25% {
+        left: 30px;
+    }
+
+    50% {
+        left: -30px;
+    }
+
+    75% {
+        left: 30px;
+    }
+
+    100% {
+        bottom: 350px;
+        left: 0;
+    }
+}
+
+.bubble-md-b {
+    background: rgba(242, 242, 222, .25);
+    border: 1px solid rgba(242, 242, 222, 1);
+    opacity: 1;
+    width: 16px;
+    height: 16px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    animation-name: bubble-up-md-b;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-md-b {
+    0% {
+        background: rgba(242, 242, 222, 0);
+        bottom: 5px;
+        right: 0;
+    }
+
+    25% {
+        background: rgba(242, 242, 222, .5);
+        right: 60px;
+    }
+
+    50% {
+        background: rgba(242, 242, 222, .25);
+        right: -40px;
+    }
+
+    75% {
+        right: 30px;
+    }
+
+    100% {
+        background: rgba(242, 242, 222, .5);
+        bottom: 200px;
+        right: -15;
+    }
+}
+
+.bubble-sm-a {
+    background: rgba(242, 242, 222, .5);
+    border: 1px solid rgba(242, 242, 222, 1);
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    animation-name: bubble-up-sm-a;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-sm-a {
+    0% {
+        background: rgba(242, 242, 222, 0);
+        bottom: 20px;
+        right: 0;
+    }
+
+    25% {
+        right: -12px;
+    }
+
+    50% {
+        background: rgba(242, 242, 222, 1);
+        right: 10px;
+    }
+
+    50% {
+        right: -15px;
+    }
+
+    100% {
+        background: rgba(242, 242, 222, .25);
+        bottom: 400px;
+        right: 5px;
+    }
+}
+
+.bubble-sm-b {
+    background: rgba(242, 242, 222, .5);
+    border: .5px solid rgba(242, 242, 222, .75);
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    animation-name: bubble-up-sm-b;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-sm-b {
+    0% {
+        bottom: 20px;
+        right: 0;
+    }
+
+    25% {
+        right: 15px;
+    }
+
+    50% {
+        background: rgba(242, 242, 222, .9);
+        right: -10px;
+    }
+
+    50% {
+        right: 5px;
+    }
+
+    100% {
+        background: rgba(242, 242, 222, .25);
+        bottom: 225px;
+        right: -2px;
+    }
+}
+
+.bubble-sm-b-fast {
+    background: rgba(242, 242, 222, .5);
+    border: .5px solid rgba(242, 242, 222, .25);
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-name: bubble-up-sm-b-fast;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-sm-b-fast {
+    0% {
+        bottom: 0;
+        right: 0;
+    }
+
+    25% {
+        right: -15px;
+    }
+
+    50% {
+        right: 20px;
+    }
+
+    50% {
+        right: -10px;
+    }
+
+    100% {
+        bottom: 325px;
+        right: 5px;
+    }
+}
+
+.bubble-sm-c {
+    background: rgba(242, 242, 222, .5);
+    border: .5px solid rgba(242, 242, 222, .75);
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    animation-name: bubble-up-sm-c;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bubble-up-sm-c {
+    0% {
+        bottom: -10px;
+        right: 0;
+    }
+
+    25% {
+        right: -20px;
+    }
+
+    50% {
+        right: 20px;
+    }
+
+    50% {
+        right: -10px;
+    }
+
+    100% {
+        bottom: 250px;
+        right: 10px;
+    }
+}
+
+
+/* === Overwrites === */
+.delay-1 {
+    animation-delay: 1s;
+}
+
+.delay-2 {
+    animation-delay: 2s;
+}
+
+.delay-3 {
+    animation-delay: 3s;
+}
+
+.delay-4 {
+    animation-delay: 4s;
+}
+
+.delay-5 {
+    animation-delay: 5s;
+}
+
+
+.duration-1 {
+    animation-duration: 1s;
+}
+
+.duration-2 {
+    animation-duration: 2s;
+}
+
+.duration-3 {
+    animation-duration: 3s;
+}
+
+.duration-4 {
+    animation-duration: 4s;
+}
+
+.duration-5 {
+    animation-duration: 5s;
+}
+
+.duration-6 {
+    animation-duration: 6s;
+}
+
+.duration-7 {
+    animation-duration: 7s}
+
+.duration-8 {
+    animation-duration: 8s;
+}
+
+.duration-9 {
+    animation-duration: 9s;
+}
+
+.duration-10 {
+    animation-duration: 10s;
+}
+
+.duration-11 {
+    animation-duration: 11s;
+}
+
+.duration-12 {
+    animation-duration: 12s;
+}
+
+/* Timing Functions */
+.linear {
+    animation-timing-function: linear;
+}
+
+.ease-in {
+    animation-timing-function: ease-in;
+}
+
+.ease-out {
+    animation-timing-function: ease-out;
+}
+
+.ease-in-out {
+    animation-timing-function: ease-in-out;
+}
