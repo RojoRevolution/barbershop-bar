@@ -12,9 +12,9 @@ window.addEventListener('DOMContentLoaded', () => {
         duration = Math.floor(1 + Math.random() * 12 + 1);
         delay = Math.floor(Math.random() * 4);
         type = Math.floor(Math.random() * 4);
-        console.log('Duration: ', duration)
-        console.log('Delay: ', delay);
-        console.log('Type: ', type);
+        // console.log('Duration: ', duration)
+        // console.log('Delay: ', delay);
+        // console.log('Type: ', type);
     }
 
     const renderAnimation = () => {
