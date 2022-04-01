@@ -1,0 +1,8 @@
+@media screen and (max-width: 800px) {
+
+    .row-to-col {
+        flex-direction: column;
+    }
+
+
+}

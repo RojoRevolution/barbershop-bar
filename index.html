@@ -16,11 +16,12 @@
     <title>Barbershop Craft Beer Bar | Dripping Springs, Texas</title>
     <meta name="description"
         content="The Barbershop is a no-frills craft beer and wine bar located in historic down town Dripping Springs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./assets/css/resets.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/bubbles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/media-queries.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,400&family=Rye&display=swap"
         rel="stylesheet">
@@ -29,7 +30,7 @@
 <body>
     <header id="main-header" class="row">
         <div class="logo">
-            <img src="./assets/images/logos/Barbershop_red.svg">
+            <img class="img" src="./assets/images/logos/Barbershop_red.svg">
         </div>
         <div class="menu">
             <div class="menu-btn">
@@ -56,7 +57,7 @@
         <div class="intro-gradient"></div>
         <div class="bubbles-b-left"></div>
         <div class="bubbles-b-right"></div>
-        <div class="bubble-container">
+        <div id="bubbles" class="bubble-container">
             <div id="animation-parent" class="row">
                 <!-- Animation Divs -->
             </div>
@@ -64,7 +65,7 @@
     </section>
     <section>
         <div id="about" class="container-flex">
-            <div class="container-content row">
+            <div class="container-content row row-to-col">
                 <div class="col mx-20 about-content">
                     <h2>A Clean and Close Pub</h2>
                     <p>
@@ -89,8 +90,40 @@
                         History of Dripping Springs, Texas and the P.A. Smith Survey by Carl Waits.
                     </p>
                 </div>
-                <div class="col mx-20">
-                    <h3>Weekly Happenings</h3>
+                <div id="weekly" class="col mx-20">
+                    <h3 class="align-c">Weekly Happenings</h3>
+                    <ul id="daily-specials">
+                        <li class="special">
+                            Every Sunday<br>
+                            Picker's Circle from 5-8<br>
+                            & $4 Acopon Beers
+                        </li>
+                        <li class="special">
+                            Every Monday:<br>
+                            $2 Tallboys (while they last)
+                        </li>
+                        <li class="special">
+                            Every Tuesday:<br>
+                            $4 Twisted X Pints
+                        </li>
+                        <li class="special">
+                            Every Wednesday:<br>
+                            $1 Off Pints <br>
+                            for Mug Club Members
+                        </li>
+                        <li class="special">
+                            Every Thursday:<br>
+                            $4 Acopon Amber
+                        </li>
+                        <li class="special">
+                            Every Friday:<br>
+                            $4 Pints of Fireman’s #4
+                        </li>
+                        <li class="special">
+                            Every Saturday:<br>
+                            Live Music 3-5
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
