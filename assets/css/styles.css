@@ -201,6 +201,11 @@ p {
     background: rgba(255,255,255,.25);
 }
 
+.menu-dark {
+    color: var(--soft-dark);
+    border: 1px solid var(--soft-dark);
+}
+
 .img-go {
     background: center no-repeat url('../images/menu/menu_animated.gif');
     background-size: 100%;
