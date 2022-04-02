@@ -26,7 +26,7 @@ h2 {
     font-family: var(--display);
     font-weight: 500;
     color: var(--off-white);
-    font-size: 2.5rem;
+    font-size: 4rem;
     margin: 1rem 0;
     line-height: 3.5rem;
 }
@@ -46,7 +46,7 @@ h4 {
     color: var(--soft-dark);
     font-size: 1.5rem;
     margin: 1rem 0 .25rem 0;
-    line-height: 1.25rem;
+    line-height: 2.125rem;
 }
 
 
@@ -374,6 +374,8 @@ p {
 
 #daily-specials {
     width: 350px;
+    display: flex;
+    flex-direction: column;
 }
 
 .special {
@@ -407,7 +409,6 @@ p {
 /* Header Overriders */
 #bottom-hero h2 {
     text-align: center;
-    font-size: 4rem;
     margin: 3rem 0;
 }
 
