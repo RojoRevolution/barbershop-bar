@@ -26,7 +26,7 @@ h2 {
     font-family: var(--display);
     font-weight: 500;
     color: var(--off-white);
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 1rem 0;
     line-height: 3.5rem;
 }
@@ -380,7 +380,6 @@ p {
 
 .special {
     margin: 10px 0;
-    background-image: url(../images/daily/monday.png);
     padding: 30px;
     color: var(--off-white);
     text-align: center;
@@ -391,6 +390,11 @@ p {
     justify-content: center;
     align-items: center;
 }
+
+.sunday {
+    background-image: url(../images/daily/monday.png);
+}
+
 
 /* === Bottom Hero === */
 #bottom-hero {

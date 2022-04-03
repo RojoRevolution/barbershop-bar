@@ -1,9 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    let menuBtn = document.querySelector('.menu-btn')
-    let animationEl = document.getElementById('bubbles')
-    let headerEl = document.getElementById('main-header')
-    let specialsList = document.getElementById('daily-specials')
+
+    const dailySpecialsBG = [
+        'url(./assets/images/daily/sunday.png)',
+        'url(./assets/images/daily/monday.png)',
+        'url(./assets/images/daily/tuesday.png)',
+        'url(./assets/images/daily/wednesday.png)',
+        'url(./assets/images/daily/thursday.png)',
+        'url(./assets/images/daily/friday.png)',
+        'url(./assets/images/daily/saturday.png)',
+    ]
+
+    const menuBtn = document.querySelector('.menu-btn')
+    const animationEl = document.getElementById('bubbles')
+    const headerEl = document.getElementById('main-header')
+    const specialsList = document.getElementsByClassName('special')
+    const specialsLI = document.querySelectorAll('special')
 
     // Header changes on scroll position
     window.addEventListener('scroll', () => {
@@ -24,6 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const renderSpecials = () => {
 
+        for (let i = 0; i < specialsList.length; i++) {
+            specialsList[i].style.backgroundImage = dailySpecialsBG[i];
+        }
     }
+
+    renderSpecials()
 
 });
