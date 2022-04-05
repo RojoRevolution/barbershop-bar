@@ -12,10 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
 
     const menuBtn = document.querySelector('.menu-btn')
+    const closeBtn = document.querySelector('.close-btn')
     const animationEl = document.getElementById('bubbles')
     const headerEl = document.getElementById('main-header')
+    const sideMenu = document.getElementById('side-menu')
     const specialsList = document.getElementsByClassName('special')
-    const specialsLI = document.querySelectorAll('special')
 
     if (window.scrollY >= 770) {
         menuBtn.classList.add('menu-dark')
@@ -44,6 +45,35 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    const openMenu = () => {
+        sideMenu.setAttribute('status', 'open');
+        sideMenu.classList.remove('d-none')
+        sideMenu.classList.add('menu-open')
+        sideMenu.classList.add('open-pos')
+    }
+
+    const closeMenu = () => {
+        sideMenu.setAttribute('status', 'closed');
+        sideMenu.classList.remove('menu-open')
+        sideMenu.classList.remove('open-pos')
+        sideMenu.classList.add('d-none')
+    }
+
+
     renderSpecials()
+
+    menuBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let menuStatus = sideMenu.getAttribute('status')
+        console.log(menuStatus)
+        openMenu()
+    })
+
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let menuStatus = sideMenu.getAttribute('status')
+        console.log(menuStatus)
+        closeMenu()
+    })
 
 });

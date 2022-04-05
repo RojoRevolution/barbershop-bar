@@ -474,7 +474,6 @@ p {
 .menu-container {
     position: fixed;
     top: 0;
-    right: 0;
     height: 100vh;
     max-width: 325px;
     width: 100%;
@@ -482,11 +481,75 @@ p {
     background-color: var(--barber-red);
     padding: 20px;
     box-shadow: -20px 0 20px 0 rgb(0 0 0 / 25%);
+    transition: .05s;
+}
+
+.menu-open {
+    animation-name: menu-slide-open;
+    animation-duration:1.5s;
+    animation-timing-function: .05s ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes menu-slide-open {
+    0% {
+        right: -365px;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.closed-pos {
+    right: -365px;
+}
+
+.open-pos {
+    right: 0;
+}
+
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
+    transition: .25s ease-in;
+}
+
+.close-btn:hover {
+    top: 12px;
+    transition: .25s ease-out;
+}
+
+.close-line-a, .close-line-b {
+    padding: 2px;
+    width: 40px;
+    border-radius: 50px;
+    background: var(--off-white);
+    transition: .25s ease-in;
+
+}
+
+.close-line-a {
+    transform: rotate(45deg);
+}
+
+.close-line-b {
+    transform: rotate(135deg);
+    position: absolute;
+    top: 1px;
+}
+
+.close-btn:hover > .close-line-a, .close-btn:hover > .close-line-b {
+    background: var(--soft-dark);
+    transition: .25s ease-out;
 }
 
 .menu-container nav ul {
     padding: 0;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 .menu-container nav ul li {
@@ -500,6 +563,12 @@ p {
     font-family: var(--sans-serif);
     font-size: 1.25rem;
     text-decoration: none;
+    transition: .5s ease-in;
+}
+
+.menu-container nav ul li a:hover {
+    color: var(--off-white-alpha);
+    transition: .5s ease-out;
 }
 
 .menu-container nav ul li:hover::before {
