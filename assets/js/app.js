@@ -47,16 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const openMenu = () => {
         sideMenu.setAttribute('status', 'open');
-        sideMenu.classList.remove('d-none')
-        sideMenu.classList.add('menu-open')
-        sideMenu.classList.add('open-pos')
+        sideMenu.classList.remove('closed-pos');
+        sideMenu.classList.remove('d-none');
+        sideMenu.classList.add('menu-open');
+        sideMenu.classList.add('open-pos');
     }
 
     const closeMenu = () => {
         sideMenu.setAttribute('status', 'closed');
-        sideMenu.classList.remove('menu-open')
-        sideMenu.classList.remove('open-pos')
-        sideMenu.classList.add('d-none')
+        sideMenu.classList.remove('menu-open');
+        sideMenu.classList.remove('open-pos');
+        sideMenu.classList.add('menu-close');
+        sideMenu.classList.add('closed-pos');
+        setTimeout(() => {
+            sideMenu.classList.add('d-none');
+            sideMenu.classList.remove('menu-close');
+        }, 500);
     }
 
 

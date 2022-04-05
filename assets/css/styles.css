@@ -486,7 +486,7 @@ p {
 
 .menu-open {
     animation-name: menu-slide-open;
-    animation-duration:1.5s;
+    animation-duration:.5s;
     animation-timing-function: .05s ease-out;
     animation-iteration-count: 1;
 }
@@ -500,6 +500,24 @@ p {
         right: 0;
     }
 }
+
+.menu-close {
+    animation-name: menu-slide-close;
+    animation-duration:.5s;
+    animation-timing-function: .05s ease-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes menu-slide-close {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -365;
+    }
+}
+
 
 .closed-pos {
     right: -365px;
