@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 :root {
     --display: 'Rye', Georgia, cursive;
     --sans-serif: 'Raleway', Helvetica, Arial, sans-serif;;
@@ -178,7 +182,7 @@ p {
 
 .scroll-bg {
     background-color: var(--off-white-alpha);
-    transition: .5s ease-in;
+    transition: .15s ease-in;
     border-bottom: 1px solid var(--dark);
 }
 
@@ -195,6 +199,7 @@ p {
 .menu-btn {
     cursor: pointer;
     font-family: var(--sans-serif);
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     padding: 10px 50px 10px 14px;
@@ -425,7 +430,7 @@ p {
 
 #bottom-hero h3 {
     line-height: 3.5rem;
-    padding: 1rem 0;
+    margin: 1rem 0;
     text-align: center;
 }
 
@@ -465,6 +470,38 @@ p {
     width: 100%;
 }
 
+/* Side Menu */
+.menu-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 325px;
+    width: 100%;
+    z-index: 21;
+    background-color: var(--barber-red);
+    padding: 20px;
+    box-shadow: -20px 0 20px 0 rgb(0 0 0 / 25%);
+}
+
+.menu-container nav ul {
+    padding: 0;
+    margin-top: 80px;
+}
+
+.menu-container nav ul li {
+    padding: 10px;
+    margin: 10px;
+}
+
+.menu-container nav ul li a {
+    color: var(--off-white);
+    font-family: var(--sans-serif);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+
 /* === Footer === */
 footer {
     background-color: var(--soft-dark);
@@ -498,4 +535,6 @@ footer .container-flex div.container:last-child {
     font-size: .75rem;
     color:var(--off-white);
 }
+
+
 

@@ -55,6 +55,16 @@
         background-image: url('../images/intro/intro_image_001@768.jpg');
     }
 
+    .menu-btn {
+        padding: 6px 37px 6px 11px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    
+    .img-go {
+        width: 36px;
+    }
+
     .bottom-hero {
         background: center / cover no-repeat url(../images/hero2/craftbeer_signs@768.jpg);
     }

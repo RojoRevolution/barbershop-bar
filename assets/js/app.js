@@ -17,17 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const specialsList = document.getElementsByClassName('special')
     const specialsLI = document.querySelectorAll('special')
 
+    if (window.scrollY >= 770) {
+        menuBtn.classList.add('menu-dark')
+        headerEl.classList.add('scroll-bg')
+        animationEl.classList.add('d-none')
+    }
+
     // Header changes on scroll position
     window.addEventListener('scroll', () => {
         // console.log(window.scrollY)
         if (window.scrollY <= 770) {
-            // console.log('770');
             menuBtn.classList.remove('menu-dark')
             headerEl.classList.remove('scroll-bg')
             animationEl.classList.remove('d-none')
         }
         if (window.scrollY >= 770) {
-            // console.log('770');
             menuBtn.classList.add('menu-dark')
             headerEl.classList.add('scroll-bg')
             animationEl.classList.add('d-none')
@@ -35,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     const renderSpecials = () => {
-
         for (let i = 0; i < specialsList.length; i++) {
             specialsList[i].style.backgroundImage = dailySpecialsBG[i];
         }
