@@ -1,3 +1,10 @@
+@media only screen and (orientation:landscape) {
+    body {
+      height: 100vw;
+      transform: rotate(90deg);
+    }
+  }
+
 @media screen and (max-width: 990px) {
     #daily-specials {
         width: 300px;
@@ -158,6 +165,7 @@
 
     #intro-bg {
         background-image: url('../images/intro/intro_image_001@500.jpg');
+        background-size: 100%;
     }
 
     /* #animation-parent {
