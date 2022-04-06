@@ -297,7 +297,7 @@ p {
     background-image: url('../images/intro/intro_image_001.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transition: 2s;
+    transition: background-image 2s;
     -webkit-transition: background-image 2s;
     -moz-transition: background-image 2s;
     -o-transition: background-image2;
