@@ -8,6 +8,10 @@
 
 @media screen and (max-width: 800px) {
 
+    #about {
+        padding: 100px 0;
+    }
+
     .row-to-col {
         flex-direction: column;
     }
@@ -26,6 +30,10 @@
     .special {
         margin: 10px 10px;
         min-width: 340px;
+    }
+
+    #weekly {
+        margin-top: 200px;
     }
 
 
@@ -71,6 +79,7 @@
 
     .map-container {
         margin: 2.5rem 0;
+        width: 100%;
     }
 
 }
@@ -92,6 +101,28 @@
         font-size: 1.25rem;
         margin: 1rem 0;
         line-height: 1.75rem;
+    }
+
+    .bubbles-t-left, .bubbles-b-left, .bubbles-t-right, .bubbles-b-right {
+        max-width: 300px;
+        width: 100%;
+        height: 177px;
+    }
+
+    .bubbles-t-left, .bubbles-b-left {
+        background-position: left top;
+    }
+
+    .bubbles-t-right, .bubbles-b-right {
+        background-position: right top;
+    }
+
+    .message {
+        display: none;
+    }
+
+    .menu-container nav ul li:hover::before {
+        display: none;
     }
 }
 
@@ -124,21 +155,9 @@
         background-image: url('../images/intro/intro_image_001@500.jpg');
     }
 
-    .bubbles-b-left {
-        width: 325px;
-    }
-
-    .bubbles-b-right {
-        width: 325px;
-    }
-
-    #animation-parent {
+    /* #animation-parent {
         display: none;
-    }
-
-    .bubbles-t-left, .bubbles-t-right, .bubbles-b-left, .bubbles-b-right {
-        width: 250px;
-    }
+    } */
 
     .bottom-hero {
         background: center / cover no-repeat url(../images/hero2/craftbeer_signs@500.jpg);

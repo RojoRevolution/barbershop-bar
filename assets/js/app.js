@@ -11,31 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
         'url(./assets/images/daily/saturday.png)',
     ]
 
-    const menuBtn = document.querySelector('.menu-btn')
-    const closeBtn = document.querySelector('.close-btn')
-    const animationEl = document.getElementById('bubbles')
-    const headerEl = document.getElementById('main-header')
-    const sideMenu = document.getElementById('side-menu')
-    const specialsList = document.getElementsByClassName('special')
+    const menuBtn = document.querySelector('.menu-btn');
+    const closeBtn = document.querySelector('.close-btn');
+    const navLinks = document.querySelectorAll('.onpage-nav');
+    const animationEl = document.getElementById('bubbles');
+    const headerEl = document.getElementById('main-header');
+    const sideMenu = document.getElementById('side-menu');
+    const specialsList = document.getElementsByClassName('special');
+    const backToTopBtn = document.querySelector('.pointer-up');
+    const backToTopMessage = document.querySelector('.message');
 
     if (window.scrollY >= 770) {
-        menuBtn.classList.add('menu-dark')
-        headerEl.classList.add('scroll-bg')
-        animationEl.classList.add('d-none')
+        menuBtn.classList.add('menu-dark');
+        headerEl.classList.add('scroll-bg');
+        animationEl.classList.add('d-none');
     }
 
     // Header changes on scroll position
     window.addEventListener('scroll', () => {
         // console.log(window.scrollY)
         if (window.scrollY <= 770) {
-            menuBtn.classList.remove('menu-dark')
-            headerEl.classList.remove('scroll-bg')
-            animationEl.classList.remove('d-none')
+            menuBtn.classList.remove('menu-dark');
+            headerEl.classList.remove('scroll-bg');
+            animationEl.classList.remove('d-none');
         }
         if (window.scrollY >= 770) {
-            menuBtn.classList.add('menu-dark')
-            headerEl.classList.add('scroll-bg')
-            animationEl.classList.add('d-none')
+            menuBtn.classList.add('menu-dark');
+            headerEl.classList.add('scroll-bg');
+            animationEl.classList.add('d-none');
         }
     })
 
@@ -68,18 +71,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderSpecials()
 
-    menuBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        let menuStatus = sideMenu.getAttribute('status')
-        console.log(menuStatus)
-        openMenu()
+    menuBtn.addEventListener('click', () => {
+        openMenu();
     })
 
-    closeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        let menuStatus = sideMenu.getAttribute('status')
-        console.log(menuStatus)
-        closeMenu()
+    closeBtn.addEventListener('click', () => {
+        closeMenu();
+    });
+
+    // Event Listener for all Menu Nav Links
+    for (let i = 0; i < navLinks.length; i++) {
+        navLinks[i].addEventListener('click', () => {
+            closeMenu();
+        })
+    }
+
+    backToTopBtn.addEventListener('mouseenter', () => {
+        backToTopMessage.classList.remove('d-none')
+    })
+
+    backToTopBtn.addEventListener('mouseleave', () => {
+        backToTopMessage.classList.add('d-none')
     })
 
 });
