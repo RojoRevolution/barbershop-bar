@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
 
-    let introBG = document.getElementById('intro-bg');
+    let introBG = document.querySelector('.backgrounds');
     let scrollImg = document.querySelector('.img-go');
 
     let desktopBG = [

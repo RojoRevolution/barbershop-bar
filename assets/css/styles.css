@@ -292,8 +292,12 @@ p {
     width: 100%;
 }
 
-#intro-bg {
+/* #intro-bg {
     background-color: #000;
+} */
+
+
+.backgrounds {
     background-image: url('../images/intro/intro_image_001.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -301,9 +305,6 @@ p {
     -webkit-transition: background-image 2s;
     -moz-transition: background-image 2s;
     -o-transition: background-image2;
-}
-
-.backgrounds {
     background-repeat:no-repeat;
     background-size: cover;
     min-height: 100vh;
