@@ -5,6 +5,11 @@
 
 }
 
+@media screen and (min-width: 800px) and (max-width: 1140px) {
+    #about .container-content {
+        padding: 0 24px;
+    }
+}
 
 @media screen and (max-width: 800px) {
 
