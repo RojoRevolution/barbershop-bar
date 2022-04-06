@@ -3,13 +3,13 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155133026-2"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155133026-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-155133026-2');
-    </script>
+    </script> -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,17 +17,36 @@
     <meta name="description"
         content="The Barbershop is a no-frills craft beer and wine bar located in historic down town Dripping Springs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@400;600;700&family=Rye&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./assets/css/resets.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/bubbles.css">
     <link rel="stylesheet" href="./assets/css/media-queries.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,700;1,400&family=Rye&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
+    <!-- Menu -->
+    <div id="side-menu" class="menu-container closed-pos d-none " status="closed">
+        <div class="pos-rel">
+            <div class="close-btn">
+                <div class="close-line-a"></div>
+                <div class="close-line-b"></div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="onpage-nav"><a href="#about">About Us</a></li>
+                <li class="onpage-nav"><a href="#weekly">Weekly Happenings</a></li>
+                <li class="onpage-nav"><a href="#location">Location & Hours</a></li>
+                <li><a href="https://www.toasttab.com/barbershop-207-mercer-st/giftcards" target="_blank"
+                        rel="noopener noreferrer">Buy a Gift Card</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Header -->
     <header id="main-header" class="row">
         <div class="logo">
             <img class="img" src="./assets/images/logos/Barbershop_red.svg">
@@ -37,7 +56,6 @@
                 Menu
             </div>
             <div class="img-go">
-                <!-- <img src="./assets/images/menu/menu_animated.gif"> -->
             </div>
         </div>
     </header>
@@ -147,7 +165,7 @@
     <section>
         <div id="location" class="container-flex py-100">
             <div class="container-content col px-20">
-                <h2 class="align-c">Don't be shy. stop on by</h2>
+                <h2 class="align-c">Don't be shy, stop on by</h2>
                 <h4 class="align-c">We are a pet friendly establishment, and outside food is welcome.</h4>
                 <div class="row justify-c">
                     <div class="map-container">
@@ -206,20 +224,30 @@
         </div>
     </section>
     <footer>
-        <div class="container-flex col">
-            <div class="container py-100">
+        <div class="container-flex col pos-rel">
+            <div id="back-to-top">
+                <div class="message pos-rel d-none">
+                    Back to the top, gov'na?
+                </div>
+                <a href="#"><img class="pointer-up pos-abs" src="./assets/images/menu/handpointing.svg"></a>
+            </div>
+            <div class="container py-50">
                 <div class="footer-logo align-c">
                     <img src="./assets/images/logos/Barbershop_red.svg">
                     <p>A clean and close pub</p>
-                    <ul>
-                        <li><a href="#">Back to the Top<a /></li>
-                        <li><a href="#">Treat a friend, buy a gift card</a></li>
+                    <ul class="row justify-c mt-60">
+
+                        <li id="gift-card" class="mx-20 pos-rel"><a
+                                href="https://www.toasttab.com/barbershop-207-mercer-st/giftcards" target="_blank"
+                                rel="noopener noreferrer">Buy a Gift Card</a></li>
                     </ul>
                 </div>
             </div>
             <div class="container">
                 <p class="copyright align-c">Copyright &copy;
-                    <script>document.write(new Date().getFullYear())</script> The Barbershop. All Rights Reserved.
+                    <script>document.write(new Date().getFullYear())</script> The Barbershop. All Rights Reserved.<br>
+                    Designed and built by <a href="https://rojorevolution.com" target="_blank"
+                        rel="noreferrer noopener">RojoRevolution</a>
                 </p>
             </div>
         </div>

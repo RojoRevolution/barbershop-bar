@@ -1,8 +1,171 @@
+@media screen and (max-width: 990px) {
+    #daily-specials {
+        width: 300px;
+    }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1140px) {
+    #about .container-content {
+        padding: 0 24px;
+    }
+}
+
 @media screen and (max-width: 800px) {
+
+    #about {
+        padding: 100px 0;
+    }
 
     .row-to-col {
         flex-direction: column;
     }
 
+    .about-content {
+        padding: 20px;
+    }
+
+    #daily-specials {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .special {
+        margin: 10px 10px;
+        min-width: 340px;
+    }
+
+    #weekly {
+        margin-top: 200px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 4rem;
+        margin: .5rem 0 1.5rem;
+        line-height:6rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+        margin: 1rem 0;
+        line-height: 3rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        line-height: 1.75rem;
+    }
+
+    #intro-bg {
+        background-image: url('../images/intro/intro_image_001@768.jpg');
+    }
+
+    .menu-btn {
+        padding: 6px 37px 6px 11px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    
+    .img-go {
+        width: 36px;
+    }
+
+    .bottom-hero {
+        background: center / cover no-repeat url(../images/hero2/craftbeer_signs@768.jpg);
+    }
+
+    .map-container {
+        margin: 2.5rem 0;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 3.25rem;
+        margin: .5rem 0 1.5rem;
+        line-height:4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+        line-height: 3rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+        line-height: 1.75rem;
+    }
+
+    .bubbles-t-left, .bubbles-b-left, .bubbles-t-right, .bubbles-b-right {
+        max-width: 300px;
+        width: 100%;
+        height: 177px;
+    }
+
+    .bubbles-t-left, .bubbles-b-left {
+        background-position: left top;
+    }
+
+    .bubbles-t-right, .bubbles-b-right {
+        background-position: right top;
+    }
+
+    .message {
+        display: none;
+    }
+
+    .menu-container nav ul li:hover::before {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    h1 {
+        color: var(--off-white);
+        font-size: 3rem;
+        margin: .5rem 0 1.5rem;
+        line-height:4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin: 1rem 0;
+        line-height: 3.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+        line-height: 1.75rem;
+    }
+
+    #welcome {
+        min-height: 70vh;
+    }
+
+    #intro-bg {
+        background-image: url('../images/intro/intro_image_001@500.jpg');
+    }
+
+    /* #animation-parent {
+        display: none;
+    } */
+
+    .bottom-hero {
+        background: center / cover no-repeat url(../images/hero2/craftbeer_signs@500.jpg);
+    }
 
 }
