@@ -297,10 +297,10 @@ p {
     background-image: url('../images/intro/intro_image_001.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -o-transition:2;
+    transition: background-image 2s;
+    -webkit-transition: background-image 2s;
+    -moz-transition: background-image 2s;
+    -o-transition: background-image2;
 }
 
 .backgrounds {
