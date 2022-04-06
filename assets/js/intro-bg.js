@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
     let introBG = document.querySelector('.backgrounds');
+    let overlayDiv = document.querySelector('.overlay');
     let scrollImg = document.querySelector('.img-go');
 
     let desktopBG = [
@@ -29,25 +30,68 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let windowSize;
 
 
+    const fadeOut = async () => {
+        console.log('Fade Out')
+        overlayDiv.classList.add('fade-out')
+    }
+
+    const fadeIn = async () => {
+        console.log('Fade In')
+        overlayDiv.classList.add('fade-in')
+    }
+
+    const transition = () => {
+        fadeOut()
+            .then(changeBG()
+                .then(fadeIn())
+            )
+    }
+
+
     // @ Fullscreen
-    const changeBG = () => {
+    const changeBG = async () => {
+        console.log('Change BG')
+        // if (overlayDiv.classList.contains('fade-in')) {
+        //     overlayDiv.classList.remove('fade-in')
+        // }
+
         if (windowSize > 768) {
             switch (intervalID) {
                 case 1:
                     intervalID = 2;
-                    introBG.style.backgroundImage = desktopBG[1]
+                    // introBG.style.backgroundImage = desktopBG[1]
+                    // overlayDiv.classList.add('fade-out')
+                    setTimeout(() => {
+                        introBG.style.backgroundImage = desktopBG[1]
+                        // overlayDiv.classList.remove('fade-out')
+                    }, 3000)
                     break;
                 case 2:
                     intervalID = 3;
                     introBG.style.backgroundImage = desktopBG[2]
+                    // overlayDiv.classList.add('fade-out')
+                    setTimeout(() => {
+                        introBG.style.backgroundImage = desktopBG[2]
+                        // overlayDiv.classList.remove('fade-out')
+                    }, 3000)
                     break;
                 case 3:
                     intervalID = 4;
                     introBG.style.backgroundImage = desktopBG[3]
+                    // overlayDiv.classList.add('fade-out')
+                    setTimeout(() => {
+                        introBG.style.backgroundImage = desktopBG[3]
+                        // overlayDiv.classList.remove('fade-out')
+                    }, 3000)
                     break;
                 case 4:
                     intervalID = 1;
                     introBG.style.backgroundImage = desktopBG[0]
+                    // overlayDiv.classList.add('fade-out')
+                    setTimeout(() => {
+                        introBG.style.backgroundImage = desktopBG[0]
+                        overlayDiv.classList.remove('fade-out')
+                    }, 3000)
                     break;
                 default:
                     break;
@@ -108,8 +152,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     checkSize()
 
-    window.addEventListener('resize', checkSize, changeBG)
+    // window.addEventListener('resize', checkSize, changeBG)
+    window.addEventListener('resize', checkSize, transition)
 
-    setInterval(changeBG, 7000);
+    // setInterval(changeBG, 7000);
+    setInterval(transition, 7000);
 
 })
