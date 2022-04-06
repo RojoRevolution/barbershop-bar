@@ -176,6 +176,10 @@ p {
     justify-content: center;
 }
 
+.justify-even {
+    justify-content: space-evenly;
+}
+
 /* ==== Header ==== */
 #main-header {
     justify-content: space-between;
