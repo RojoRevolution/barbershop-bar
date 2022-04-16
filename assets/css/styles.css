@@ -1,13 +1,14 @@
 html {
     scroll-behavior: smooth;
-  }
+}
 
 :root {
     --display: 'Rye', Georgia, cursive;
     --display-cursive: 'Great Vibes', Georgia, cursive;
-    --sans-serif: 'Raleway', Helvetica, Arial, sans-serif;;
+    --sans-serif: 'Raleway', Helvetica, Arial, sans-serif;
+    ;
     --off-white: rgb(242, 242, 222);
-    --off-white-alpha: rgba(242, 242, 222,.75);
+    --off-white-alpha: rgba(242, 242, 222, .75);
     --dark: #171717;
     --soft-dark: #333333;
     --green-metal: #52615F;
@@ -24,7 +25,7 @@ h1 {
     color: var(--off-white);
     font-size: 6rem;
     margin: .5rem 0 1.5rem;
-    line-height:6rem;
+    line-height: 6rem;
 }
 
 h2 {
@@ -132,6 +133,18 @@ p {
     position: relative;
 }
 
+.z-index-1 {
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.z-index-3 {
+    z-index: 3;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -141,6 +154,7 @@ p {
     display: flex;
     flex-direction: column;
 }
+
 
 .container-flex {
     width: 100%;
@@ -153,6 +167,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
 
 .height-screen {
@@ -219,7 +234,7 @@ p {
 }
 
 .menu:hover .menu-btn {
-    background: rgba(255,255,255,.25);
+    background: rgba(255, 255, 255, .25);
 }
 
 .menu-dark {
@@ -248,8 +263,8 @@ p {
 }
 
 .top-gradient {
-    background: rgb(242,242,222);
-    background: linear-gradient(0deg, rgba(242,242,222,0) 0%, rgba(242,242,222,1) 100%);
+    background: rgb(242, 242, 222);
+    background: linear-gradient(0deg, rgba(242, 242, 222, 0) 0%, rgba(242, 242, 222, 1) 100%);
     height: 40px;
     width: 100%;
     position: fixed;
@@ -257,16 +272,17 @@ p {
 
 /* ==== Intro Section ==== */
 #welcome {
+    /* background-color: #000; */
     min-height: 100vh;
     width: 100%;
     position: relative;
 }
 
 #welcome h3 {
-    text-align:center;
+    text-align: center;
 }
 
-#welcome h3::before{
+#welcome h3::before {
     content: '';
     padding: 2px;
     width: 100px;
@@ -287,10 +303,48 @@ p {
 }
 
 .overlay {
-    background-color: rgba(0,0,0,.6);
+    background-color: rgba(0, 0, 0, .6);
     min-height: 100vh;
     width: 100%;
+    transition: 4s;
 }
+
+/* .fade-out {
+    background-color: rgba(0,0,0,.6);
+    animation-name:bg-fade-out;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+
+@keyframes bg-fade-out {
+    0% {
+        background-color: rgba(0,0,0,.6);
+    }
+    50% {
+        background-color: rgba(0,0,0,1);
+    }
+    100% {
+        background-color: rgba(0,0,0,.6);
+    }
+}
+
+.fade-in {
+    background-color: rgba(0,0,0,1);
+    animation-name:bg-fade-in;
+    animation-duration: s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bg-fade-in {
+    0% {
+        background-color: rgba(0,0,0,1);
+    }
+    100% {
+        background-color: rgba(0,0,0,0);
+    }
+} */
 
 /* #intro-bg {
     background-color: #000;
@@ -298,20 +352,119 @@ p {
 
 
 .backgrounds {
-    background-image: url('../images/intro/intro_image_001.jpg');
+    /* background-color: #000; */
+    /* background-image: url('../images/intro/intro_image_001.jpg'); */
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transition: background-image 2s;
+    /* transition: background-image 2s;
     -webkit-transition: background-image 2s;
     -moz-transition: background-image 2s;
-    -o-transition: background-image2;
-    background-repeat:no-repeat;
+    -o-transition: background-image2; */
+    background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     width: 100%;
 }
 
-#welcome h1, #welcome h2 {
+.bg-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    min-height: 100vh;
+    width: 100%;
+    transition: 4s;
+    top: 0;
+
+}
+
+.bg-1,
+.bg-2,
+.bg-3,
+.bg-4 {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+    transition: 1s easoout;
+}
+
+.bg-1 {
+    background-image: url('../images/intro/intro_image_001.jpg');
+    opacity: 1;
+    transition: 2s;
+}
+
+.bg-2 {
+    background-image: url('../images/intro/intro_image_002.jpg');
+    opacity: 1;
+    transition: 2s;
+
+}
+
+.bg-3 {
+    background-image: url('../images/intro/intro_image_003.jpg');
+    opacity: 1;
+    transition: 2s;
+
+}
+
+.bg-4 {
+    background-image: url('../images/intro/intro_image_004.jpg');
+    opacity: 1;
+    transition: 2s;
+
+}
+
+.fade-out {
+    opacity: 0;
+    transition: 2s;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: 2s;
+}
+
+/* .fade-out {
+    opacity: 0;
+    animation-name: bg-fade-out;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes bg-fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    opacity: 1;
+    animation-name: bg-fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bg-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} */
+
+
+#welcome h1,
+#welcome h2 {
     text-align: center;
 }
 
@@ -320,6 +473,10 @@ p {
     bottom: 0;
     height: auto;
     width: 100%;
+}
+
+.bubble-container {
+    z-index: 3;
 }
 
 .bubbles-b-left {
@@ -334,7 +491,7 @@ p {
 .bubbles-b-right {
     position: absolute;
     right: 0;
-    bottom: -4px; 
+    bottom: -4px;
     background: center no-repeat url(../images/intro/bubbles-right.svg);
     width: 486px;
     height: 177px;
@@ -353,7 +510,7 @@ p {
 .bubbles-t-left {
     position: absolute;
     left: 0;
-    top: -4px; 
+    top: -4px;
     background: center no-repeat url(../images/intro/bubbles-right.svg);
     width: 486px;
     height: 177px;
@@ -365,13 +522,14 @@ p {
     bottom: 0;
     height: 300px;
     width: 100%;
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.75) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .75) 100%);
 
 }
 
 /* ==== Main Content ==== */
 #about {
+    background-color: var(--off-white);
     padding: 200px 0;
     position: relative;
 }
@@ -380,7 +538,8 @@ p {
     justify-content: space-around;
 }
 
-#about h2, #about h3 {
+#about h2,
+#about h3 {
     color: var(--dark);
 }
 
@@ -434,7 +593,7 @@ p {
     margin: 2rem 0;
 }
 
-.bottom-hero .overlay{
+.bottom-hero .overlay {
     min-height: 650px;
     display: flex;
     justify-content: center;
@@ -447,7 +606,7 @@ p {
     text-align: center;
 }
 
-#bottom-hero h3::before{
+#bottom-hero h3::before {
     content: '';
     padding: 2px;
     width: 100px;
@@ -499,7 +658,7 @@ p {
 
 .menu-open {
     animation-name: menu-slide-open;
-    animation-duration:.5s;
+    animation-duration: .5s;
     animation-timing-function: .05s ease-out;
     animation-iteration-count: 1;
 }
@@ -516,7 +675,7 @@ p {
 
 .menu-close {
     animation-name: menu-slide-close;
-    animation-duration:.5s;
+    animation-duration: .5s;
     animation-timing-function: .05s ease-out;
     animation-iteration-count: 1;
 }
@@ -554,7 +713,8 @@ p {
     transition: .25s ease-out;
 }
 
-.close-line-a, .close-line-b {
+.close-line-a,
+.close-line-b {
     padding: 2px;
     width: 40px;
     border-radius: 50px;
@@ -573,7 +733,8 @@ p {
     top: 1px;
 }
 
-.close-btn:hover > .close-line-a, .close-btn:hover > .close-line-b {
+.close-btn:hover>.close-line-a,
+.close-btn:hover>.close-line-b {
     background: var(--soft-dark);
     transition: .25s ease-out;
 }
@@ -676,7 +837,7 @@ footer {
 .message::before {
     content: '';
     width: 30px;
-    height:30px;
+    height: 30px;
     background-color: var(--off-white);
     position: absolute;
     left: -8px;
@@ -703,30 +864,39 @@ footer {
     0% {
         text-shadow: 0 0 0;
     }
+
     25% {
         text-shadow: 0 0 20px;
     }
+
     30% {
         text-shadow: 0 0 0;
     }
+
     35% {
         text-shadow: 0 0 20px;
     }
+
     60% {
         text-shadow: 0 0 0;
     }
+
     65% {
         text-shadow: 0 0 20px;
     }
+
     70% {
         text-shadow: 0 0 0;
     }
+
     75% {
         text-shadow: 0 0 20px;
     }
+
     90% {
         text-shadow: 0 0 0;
     }
+
     100% {
         text-shadow: 0 0 0;
     }
@@ -761,13 +931,10 @@ footer .container-flex div.container:last-child {
 
 .copyright {
     font-size: .75rem;
-    color:var(--off-white);
+    color: var(--off-white);
     line-height: 1.125rem;
 }
 
 .copyright a {
     color: var(--off-white);
 }
-
-
-
