@@ -5,19 +5,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     let intervalID = 1;
 
-
-    // @ Fullscreen
     const changeBG = () => {
-        console.log('Change BG')
-        console.log('Interval ID = ', intervalID)
-
+        // Remove fade-in class afte the first complete rotation
         if (bgOne.classList.contains("fade-in")) {
             bgOne.classList.remove("fade-in");
         }
-
+        // Chnage the interval ID to continue to rotation
         switch (intervalID) {
             case 1:
-                console.log('Case 1')
                 intervalID = 2;
                 setTimeout(() => {
                     bgOne.classList.add('fade-out');
