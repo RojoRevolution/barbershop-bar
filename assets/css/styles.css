@@ -302,6 +302,10 @@ p {
     bottom: 0;
 }
 
+#intro-bg {
+    background-image: url('../images/intro/intro_image_001.jpg');
+}
+
 .overlay {
     background-color: rgba(0, 0, 0, .6);
     min-height: 100vh;
