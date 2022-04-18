@@ -188,6 +188,7 @@
 
     .bg-1 {
         background-image: url('../images/intro/intro_image_001@500.jpg');
+        background-position: bottom center;
     }
 
     .bg-2 {
@@ -196,6 +197,12 @@
 
     .bg-3 {
         background-image: url('../images/intro/intro_image_003@500.jpg');
+    }
+
+    .bg-1,
+    .bg-2,
+    .bg-3 {
+        background-position: bottom center;
     }
 
     .bottom-hero {
