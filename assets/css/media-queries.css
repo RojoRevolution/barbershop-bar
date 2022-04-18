@@ -77,10 +77,6 @@
         line-height: 1.75rem;
     }
 
-    /* #intro-bg {
-        background-image: url('../images/intro/intro_image_001@768.jpg');
-    } */
-
     .bg-1 {
         background-image: url('../images/intro/intro_image_001@768.jpg');
     }
@@ -189,15 +185,6 @@
     #welcome {
         min-height: 70vh;
     }
-
-    /* #intro-bg {
-        background-image: url('../images/intro/intro_image_001@500.jpg');
-        background-size: 100%;
-    } */
-
-    /* #animation-parent {
-        display: none;
-    } */
 
     .bg-1 {
         background-image: url('../images/intro/intro_image_001@500.jpg');
