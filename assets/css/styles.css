@@ -309,48 +309,6 @@ p {
     transition: 4s;
 }
 
-/* .fade-out {
-    background-color: rgba(0,0,0,.6);
-    animation-name:bg-fade-out;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
-
-
-@keyframes bg-fade-out {
-    0% {
-        background-color: rgba(0,0,0,.6);
-    }
-    50% {
-        background-color: rgba(0,0,0,1);
-    }
-    100% {
-        background-color: rgba(0,0,0,.6);
-    }
-}
-
-.fade-in {
-    background-color: rgba(0,0,0,1);
-    animation-name:bg-fade-in;
-    animation-duration: s;
-    animation-iteration-count: 1;
-}
-
-@keyframes bg-fade-in {
-    0% {
-        background-color: rgba(0,0,0,1);
-    }
-    100% {
-        background-color: rgba(0,0,0,0);
-    }
-} */
-
-/* #intro-bg {
-    background-color: #000;
-} */
-
-
 .backgrounds {
     /* background-color: #000; */
     /* background-image: url('../images/intro/intro_image_001.jpg'); */
@@ -391,30 +349,27 @@ p {
 }
 
 .bg-1 {
+    background-color: var(--green-metal);
     background-image: url('../images/intro/intro_image_001.jpg');
+    background-position: top center;
     opacity: 1;
     transition: 2s;
 }
 
 .bg-2 {
+    background-color: var(--green-metal);
     background-image: url('../images/intro/intro_image_002.jpg');
+    background-position: top center;
     opacity: 1;
     transition: 2s;
-
 }
 
 .bg-3 {
+    background-color: var(--green-metal);
     background-image: url('../images/intro/intro_image_003.jpg');
+    background-position: top center;
     opacity: 1;
     transition: 2s;
-
-}
-
-.bg-4 {
-    background-image: url('../images/intro/intro_image_004.jpg');
-    opacity: 1;
-    transition: 2s;
-
 }
 
 .fade-out {
@@ -426,42 +381,6 @@ p {
     opacity: 1;
     transition: 2s;
 }
-
-/* .fade-out {
-    opacity: 0;
-    animation-name: bg-fade-out;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-}
-
-
-@keyframes bg-fade-out {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-.fade-in {
-    opacity: 1;
-    animation-name: bg-fade-in;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-}
-
-@keyframes bg-fade-in {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-} */
-
 
 #welcome h1,
 #welcome h2 {
