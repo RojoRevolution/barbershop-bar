@@ -11,15 +11,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     // @ Fullscreen
     const changeBG = () => {
-        console.log(windowSize)
-
         if (bgOne.classList.contains("fade-in")) {
             bgOne.classList.remove("fade-in");
         }
 
         switch (intervalID) {
             case 1:
-                console.log('Case 1')
                 intervalID = 2;
                 setTimeout(() => {
                     bgOne.classList.add('fade-out');
@@ -52,12 +49,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // window.addEventListener('resize', checkSize, changeBG)
     window.addEventListener('resize', checkSize)
 
-    // if (windowSize < 550) {
-    //     console.log('returning')
-    //     return
-    // } else {
-    //     setInterval(changeBG, 7000);
-    // }
+    if (windowSize < 550) {
+        console.log('returning')
+        return
+    } else {
+        setInterval(changeBG, 7000);
+    }
     setInterval(changeBG, 7000);
 
 })
