@@ -192,6 +192,7 @@
 
     #intro-bg {
         background-image: url('../images/intro/intro_image_001@500.jpg');
+        background-size: contain;
     }
 
     .bg-1 {
