@@ -2,17 +2,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const bgOne = document.getElementById('slider1');
     const bgTwo = document.getElementById('slider2');
+    const bgThree = document.getElementById('slider3');
 
     let intervalID = 1;
+    let windowSize;
 
+
+
+    // @ Fullscreen
     const changeBG = () => {
-        // Remove fade-in class afte the first complete rotation
+        console.log(windowSize)
+
         if (bgOne.classList.contains("fade-in")) {
             bgOne.classList.remove("fade-in");
         }
-        // Chnage the interval ID to continue to rotation
+
         switch (intervalID) {
             case 1:
+                console.log('Case 1')
                 intervalID = 2;
                 setTimeout(() => {
                     bgOne.classList.add('fade-out');
@@ -36,6 +43,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    setInterval(changeBG, 7000);
+    const checkSize = () => {
+        windowSize = window.innerWidth
+    }
+
+    checkSize()
+
+    // window.addEventListener('resize', checkSize, changeBG)
+    window.addEventListener('resize', checkSize)
+
+    if (windowSize < 550) {
+        console.log('returning')
+        return
+    } else {
+        setInterval(changeBG, 7000);
+    }
+    // setInterval(transition, 7000);
 
 })

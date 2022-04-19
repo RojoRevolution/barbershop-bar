@@ -212,10 +212,11 @@
     .bg-2,
     .bg-3 {
         background-position: bottom center;
+        display: none;
     }
 
     .bottom-hero {
-        background: center / cover no-repeat url(../images/hero2/craftbeer_signs@500.jpg);
+        background: bottom / cover no-repeat url(../images/hero2/craftbeer_signs@500.jpg);
     }
 
 }
