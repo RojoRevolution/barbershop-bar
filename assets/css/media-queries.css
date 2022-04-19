@@ -212,7 +212,8 @@
     .bg-2,
     .bg-3 {
         background-position: bottom center;
-        display: none;
+        background-size: contain;
+        /* display: none; */
     }
 
     .bottom-hero {
