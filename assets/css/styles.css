@@ -406,7 +406,7 @@ p {
     position: absolute;
     left: 0;
     bottom: -4px;
-    background: center no-repeat url(../images/intro/bubbles-left.svg);
+    background: center no-repeat url(../images/bubbles-left.svg);
     width: 486px;
     height: 177px;
 }
@@ -415,7 +415,7 @@ p {
     position: absolute;
     right: 0;
     bottom: -4px;
-    background: center no-repeat url(../images/intro/bubbles-right.svg);
+    background: center no-repeat url(../images/bubbles-right.svg);
     width: 486px;
     height: 177px;
 }
@@ -424,7 +424,7 @@ p {
     position: absolute;
     right: 0;
     top: -4px;
-    background: center no-repeat url(../images/intro/bubbles-left.svg);
+    background: center no-repeat url(../images/bubbles-left.svg);
     width: 486px;
     height: 177px;
     transform: rotate(180deg);
@@ -434,7 +434,7 @@ p {
     position: absolute;
     left: 0;
     top: -4px;
-    background: center no-repeat url(../images/intro/bubbles-right.svg);
+    background: center no-repeat url(../images/bubbles-right.svg);
     width: 486px;
     height: 177px;
     transform: rotate(180deg);
