@@ -1,0 +1,20 @@
+{
+    "name": "The Barbershop Bar",
+    "short_name": "The Barbershop Bar",
+    "description": "Landing page for The Barbershop Bar. A craft beer and wine bar located in historic downtown Dripping Springs, TX.",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#f2f2de",
+    "background_color": "#f2f2de",
+    "display": "standalone"
+}
